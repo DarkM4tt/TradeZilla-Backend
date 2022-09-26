@@ -41,6 +41,10 @@ app.use('/api', orderRoutes)
 
 const port = process.env.PORT || 5000
 
+app.get('/', (req, res) => {
+  res.json('Server Started')
+})
+
 if (
   process.env.NODE_ENV === 'production' ||
   process.env.NODE_ENV === 'staging'
